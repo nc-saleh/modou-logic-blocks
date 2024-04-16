@@ -1,2 +1,7 @@
 # modou-logic-blocks
-modou's logic blocks for seminar 2 of apr 2024
+
+Check out **mission.md** in the round 1 folder!
+
+Don't forget to `npm install`...
+
+Then `npm test` to run tests!

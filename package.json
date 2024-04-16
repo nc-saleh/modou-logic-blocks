@@ -1,0 +1,15 @@
+{
+  "name": "modou-logic-blocks",
+  "version": "1.0.0",
+  "description": "modou's logic blocks for seminar 2 of apr 2024",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
