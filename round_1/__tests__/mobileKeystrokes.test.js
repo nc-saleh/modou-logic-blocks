@@ -1,22 +1,30 @@
-const { mobileDisplayKeystrokes } = require("../mobileKeystrokes");
+const { mobileDisplayKeystrokes } = require("../mobileKeystrokes")
+const timeFunction = require("../../performance")
+const { performance } = require("perf_hooks")
 
 describe("mobileDisplayKeystrokes", () => {
   test("should return 0 for an empty string", () => {
-    expect(mobileDisplayKeystrokes("")).toBe(0);
-  });
+    timeFunction(mobileDisplayKeystrokes, "")
+    expect(mobileDisplayKeystrokes("")).toBe(0)
+  })
   test("should return accurate keystroke count for special characters", () => {
-    expect(mobileDisplayKeystrokes("*#")).toBe(2);
-  });
+    timeFunction(mobileDisplayKeystrokes, "*#")
+    expect(mobileDisplayKeystrokes("*#")).toBe(2)
+  })
   test("should return accurate keystroke count for numbers", () => {
-    expect(mobileDisplayKeystrokes("123")).toBe(3);
-  });
+    timeFunction(mobileDisplayKeystrokes, "123")
+    expect(mobileDisplayKeystrokes("123")).toBe(3)
+  })
   test("should return accurate keystroke count for letters", () => {
-    expect(mobileDisplayKeystrokes("abc")).toBe(9);
-  });
+    timeFunction(mobileDisplayKeystrokes, "abc")
+    expect(mobileDisplayKeystrokes("abc")).toBe(9)
+  })
   test("should return accurate keystroke count for longer words", () => {
-    expect(mobileDisplayKeystrokes("northcoders")).toBe(38);
-  });
+    timeFunction(mobileDisplayKeystrokes, "northcoders")
+    expect(mobileDisplayKeystrokes("northcoders")).toBe(38)
+  })
   test("should return accurate keystroke count for a combination string", () => {
-    expect(mobileDisplayKeystrokes("*#123northcoders")).toBe(43);
-  });
-});
+    timeFunction(mobileDisplayKeystrokes, "*#123northcoders")
+    expect(mobileDisplayKeystrokes("*#123northcoders")).toBe(43)
+  })
+})
